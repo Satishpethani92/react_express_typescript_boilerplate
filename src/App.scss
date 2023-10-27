@@ -1,0 +1,89 @@
+.secondary-bg {
+  background-color: #223866 !important;
+}
+
+.secondary-bg-light {
+  background-color: #3c5790 !important;
+}
+
+.custom-table {
+  border-radius: 0.5rem 0.5rem 0 0;
+  thead {
+    tr {
+      background-color: #6c7ae0 !important;
+      color: #fff !important;
+      th {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  tbody {
+    tr {
+      background-color: #fff !important;
+      color: #666 !important;
+      td {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+  }
+}
+
+.pagination {
+  background-color: #fff !important;
+  color: #666 !important;
+  border-radius: 0 0 0.5rem 0.5rem;
+  button {
+    background-color: #fff;
+    color: #666;
+  }
+}
+
+.primary-light {
+  background-color: #ecf2ff !important;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+.loaderBack {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  z-index: 5000;
+}
+.wrap-text {
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//Loader Css
+.loader {
+  width: 45px;
+  height: 40px;
+  background: linear-gradient(#0000 calc(1 * 100% / 6), #fff 0 calc(3 * 100% / 6), #0000 0),
+    linear-gradient(#0000 calc(2 * 100% / 6), #fff 0 calc(4 * 100% / 6), #0000 0),
+    linear-gradient(#0000 calc(3 * 100% / 6), #fff 0 calc(5 * 100% / 6), #0000 0);
+  background-size: 10px 400%;
+  background-repeat: no-repeat;
+  animation: matrix 1s infinite linear;
+}
+
+@keyframes matrix {
+  0% {
+    background-position:
+      0% 100%,
+      50% 100%,
+      100% 100%;
+  }
+
+  100% {
+    background-position:
+      0% 0%,
+      50% 0%,
+      100% 0%;
+  }
+}

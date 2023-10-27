@@ -1,0 +1,90 @@
+{
+  "name": "react_express_boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@prisma/client": "^5.5.2",
+    "@reduxjs/toolkit": "^1.9.7",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.2",
+    "callsite": "^1.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.1",
+    "morgan": "^1.10.0",
+    "prisma": "^5.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11",
+    "react-phone-input-2": "^2.15.1",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.17.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.3",
+    "sass": "^1.69.5",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "scripts": {
+    "start:client": "react-scripts start",
+    "start:server": "cd server && nodemon",
+    "format": "npx prettier --write .",
+    "start": "cd server && nodemon & react-scripts start",
+    "build": "react-scripts build",
+    "deploy:unix": "bash deploy.sh",
+    "deploy:windows-server": "cd server && tsc -p tsconfig.json && cd .. && copy .\\server\\.env .\\server-build\\.env && cd server-build && pm2 start index.js --name \"app\"",
+    "deploy:windows": "npm run build && cd server && tsc -p tsconfig.json && cd .. && copy .\\server\\.env .\\server-build\\.env && cd server-build && pm2 start index.js --name \"app\"",
+    "setup:db": "cd server && prisma generate && prisma db push",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/callsite": "^1.0.33",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.20",
+    "@types/jest": "^27.5.2",
+    "@types/lodash": "^4.14.196",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^16.18.59",
+    "@types/node-fetch": "^2.6.4",
+    "@types/nodemon": "^1.19.3",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@types/uuid": "^9.0.2",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
